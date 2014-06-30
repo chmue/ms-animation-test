@@ -20,6 +20,9 @@ install:
   - R -e '.libPaths(); sessionInfo()'
   - Rscript -e 'install.packages(c("ggplot2", "animation"), dep = TRUE, quiet = TRUE, repos = c("http://rforge.net", "http://cran.rstudio.org"))'
 
+before_script: mkdir -p shippable
+
 # run tests
 script:
   - make anim1.mp4
+  - mv anim1.mp4 shippable
