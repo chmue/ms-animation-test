@@ -15,7 +15,6 @@ install:
   - sudo apt-add-repository -y ppa:marutter/c2d4u
   - sudo apt-get update -qq
   - sudo apt-get install -qq r-base-dev r-recommended ffmpeg
-  - "[ ! -d ${R_LIBS_USER} ] && mkdir ${R_LIBS_USER}"
   - R --version
   - R -e '.libPaths(); sessionInfo()'
   - Rscript -e 'install.packages(c("ggplot2", "animation"), dep = TRUE, quiet = TRUE, repos = c("http://rforge.net", "http://cran.rstudio.org"))'
