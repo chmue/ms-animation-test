@@ -14,5 +14,5 @@ ani.options(interval=2)
 ani.options(ani.width=1920, ani.height=1080, outdir=getwd())
 ani.options(autoplay = FALSE)
 
-saveVideo(anim(), video.name = "anim1.mp4")
+saveVideo(anim(), video.name = "anim1.mp4", clean = TRUE)
 
