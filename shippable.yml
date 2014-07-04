@@ -3,6 +3,11 @@
 # it is not really python, but there is no R support on Shippable
 language: python
 
+cache:
+  apt: true
+  directories:
+    - R
+
 # environment variables
 env:
   global:
@@ -27,5 +32,5 @@ script:
   - make anim1.mp4
   - mv anim1.mp4 shippable
 
-after_success:
-  'echo "Build successful. Here the file" | mail -a anim1.mp4 -s "Build success" $(git show -s --format=%ae)'
+# after_success:
+#   'echo "Build successful. Here the file" | mail -a anim1.mp4 -s "Build success" $(git show -s --format=%ae)'
